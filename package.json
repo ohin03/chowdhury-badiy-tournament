@@ -1,0 +1,16 @@
+ {
+  "name": "tournament-fullstack",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+  "server": "cd backend && npm run dev",
+  "client": "cd frontend && npm start",
+  "dev": "concurrently \"npm run server\" \"npm run client\"",
+  "build": "cd frontend && npm run build",
+  "start": "cd backend && npm start"
+},
+
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  }
+}
