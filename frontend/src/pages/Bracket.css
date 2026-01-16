@@ -1,0 +1,280 @@
+/* Bracket Page Styles */
+
+.tournament-result-banner {
+  animation: slideDown 0.5s ease-out;
+}
+
+.result-card {
+  background: linear-gradient(135deg, #ffc107 0%, #ff9800 100%);
+  border-radius: 12px;
+  padding: 2rem;
+  color: #fff;
+  box-shadow: 0 8px 24px rgba(255, 193, 7, 0.3);
+  text-align: center;
+  border: 3px solid #e67e22;
+}
+
+.result-champion {
+  animation: scaleIn 0.6s ease-out;
+}
+
+.result-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.champion-name {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #fff;
+  margin: 1rem 0;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+  letter-spacing: 0.5px;
+}
+
+.runner-up-info {
+  margin-top: 1.5rem;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: rgba(0, 0, 0, 0.1);
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+}
+
+.runner-up-label {
+  font-weight: 600;
+}
+
+.runner-up-name {
+  font-weight: 700;
+  color: #e8e8e8;
+}
+
+/* Bracket Container */
+.bracket-container {
+  animation: fadeIn 0.5s ease-out 0.2s both;
+}
+
+.bracket-card {
+  transition: all 0.3s ease;
+  border: 2px solid #ddd;
+  height: 100%;
+}
+
+.bracket-card:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  border-color: #0dcaf0;
+}
+
+.bracket-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+}
+
+.bracket-header h5 {
+  margin: 0;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+/* Match Card */
+.match-card {
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  transition: all 0.3s ease;
+  background-color: #f8f9fa;
+}
+
+.match-card:last-child {
+  margin-bottom: 0;
+}
+
+.match-card:hover {
+  border-color: #0dcaf0;
+  box-shadow: 0 4px 12px rgba(13, 202, 240, 0.15);
+}
+
+.match-team {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 0;
+  font-weight: 500;
+}
+
+.team-name {
+  color: #333;
+  font-size: 0.95rem;
+  padding: 0.5rem;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.team-name.winner {
+  background-color: #d4edda;
+  color: #155724;
+  font-weight: 700;
+  padding: 0.5rem 0.75rem;
+  border-left: 3px solid #28a745;
+}
+
+.match-divider {
+  text-align: center;
+  color: #999;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.5rem 0;
+  margin: 0.25rem 0;
+}
+
+.winner-banner {
+  background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+  color: #fff;
+  padding: 0.75rem;
+  border-radius: 6px;
+  text-align: center;
+  font-weight: 700;
+  margin-top: 0.75rem;
+  font-size: 0.95rem;
+  box-shadow: 0 2px 8px rgba(40, 167, 69, 0.2);
+}
+
+.pending-banner {
+  background: linear-gradient(135deg, #ffc107 0%, #fd7e14 100%);
+  color: #fff;
+  padding: 0.75rem;
+  border-radius: 6px;
+  text-align: center;
+  font-weight: 600;
+  margin-top: 0.75rem;
+  font-size: 0.95rem;
+  box-shadow: 0 2px 8px rgba(255, 193, 7, 0.2);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+.delete-btn {
+  font-size: 0.85rem;
+  padding: 0.4rem 0.6rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.delete-btn:hover {
+  background-color: #dc3545;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* Animations */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .result-card {
+    padding: 1.5rem;
+  }
+
+  .result-title {
+    font-size: 1.1rem;
+  }
+
+  .champion-name {
+    font-size: 1.5rem;
+  }
+
+  .runner-up-info {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .match-card {
+    padding: 0.75rem;
+  }
+
+  .team-name {
+    font-size: 0.9rem;
+  }
+
+  .delete-btn {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .result-card {
+    padding: 1rem;
+  }
+
+  .result-title {
+    font-size: 1rem;
+  }
+
+  .champion-name {
+    font-size: 1.3rem;
+    margin: 0.75rem 0;
+  }
+
+  .match-card {
+    padding: 0.6rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .match-divider {
+    font-size: 0.75rem;
+    padding: 0.25rem 0;
+  }
+
+  .winner-banner,
+  .pending-banner {
+    font-size: 0.85rem;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+  }
+}
