@@ -153,7 +153,7 @@ export default function Home() {
                       to={`/bracket/${t._id}`}
                       className="btn btn-success btn-sm"
                     >
-                      🏆 Tournament
+                      🏆All Matches
                     </Link>
                   </div>
                 </div>

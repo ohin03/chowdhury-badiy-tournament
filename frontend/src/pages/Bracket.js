@@ -62,7 +62,7 @@ export default function Bracket() {
 
   return (
     <div className="container mt-4">
-      <h2 className="mb-2 fw-bold">⚡ Tournament Bracket</h2>
+      <h2 className="mb-2 fw-bold">⚡ Tournament All Matches</h2>
       {tournament && <p className="text-muted mb-4">{tournament.name} ({tournament.year})</p>}
 
       {/* Tournament Result Banner */}

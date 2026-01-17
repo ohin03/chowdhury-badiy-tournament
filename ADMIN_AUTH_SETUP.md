@@ -46,7 +46,7 @@ res.json({ token });
 
 ### Current Status
 - **Admin Username**: `admin`
-- **Admin Password**: `khelatournament123@@` (hashed)
+- **Admin Password**: `********` (hashed)
 - **Created/Updated**: December 26, 2025
 - **Database**: MongoDB (khelaDB)
 - **Ready to Login**: ✅ YES
@@ -98,7 +98,7 @@ On Your Network: http://localhost:3000
 2. Click "🔐 Admin" button in Navbar
 3. Enter credentials:
    - **Username**: `admin`
-   - **Password**: `khelatournament123@@`
+   - **Password**: `*******`
 4. Click "Login"
 5. ✅ You should see Admin Dashboard
 
@@ -119,7 +119,7 @@ if (res.data.token) {
 ### Backend Authentication
 ```
 POST /api/auth/login
-Request: { username: "admin", password: "khelatournament123@@" }
+Request: { username: "admin", password: "******" }
 Response: { token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..." }
 ```
 
@@ -181,7 +181,7 @@ router.post("/", auth, async (req, res) => { ... });
 ### Test Case 1: Correct Credentials
 ```
 Username: admin
-Password: khelatournament123@@
+Password: *********
 Expected: Login successful, redirected to dashboard
 ```
 
@@ -195,7 +195,7 @@ Expected: Error message "Wrong password"
 ### Test Case 3: Wrong Username
 ```
 Username: wrongadmin
-Password: khelatournament123@@
+Password: **********
 Expected: Error message "Admin not found"
 ```
 
@@ -248,7 +248,7 @@ Expected: Error message "Admin not found"
 **Your admin authentication is now fully configured and secure:**
 
 - ✅ Username: `admin`
-- ✅ Password: `khelatournament123@@` (hashed in database)
+- ✅ Password: `*******` (hashed in database)
 - ✅ Credentials stored safely in `backend/.env`
 - ✅ Never exposed to frontend or GitHub
 - ✅ Ready for immediate use
