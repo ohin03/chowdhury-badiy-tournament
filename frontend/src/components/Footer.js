@@ -18,16 +18,11 @@ export default function Footer() {
 
           </div>
 
-          <div className="footer-section">
-            <h5 className="footer-title">Quick Links</h5>
-            <ul className="footer-links">
-              <li><a href="/">Home</a></li>
-              <li><a href="/tournaments">Tournaments</a></li>
-              
-              <li><a href="/teams">Teams</a></li>
-              <li><a href="/players">Players</a></li>
-            </ul>
-          </div>
+          
+
+
+
+          
 
           <div className="footer-section">
             <h5 className="footer-title">Sports Supported</h5>
