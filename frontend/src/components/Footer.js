@@ -37,6 +37,13 @@ export default function Footer() {
               <li>🏏 Cricket</li>
             </ul>
           </div>
+
+
+<div className="footer-logo-section">
+            <img src="/tournament-logo.png" alt="Chowdhury Badiy Tournament" className="footer-logo" />
+          </div>
+
+
         </div>
 
         <div className="footer-divider"></div>

@@ -76,7 +76,7 @@ export default function TeamForm() {
                   <input
                     type="text"
                     className="form-control"
-                    placeholder="e.g., Phoenix Warriors"
+                    placeholder="Team Name"
                     value={name}
                     onChange={e => setName(e.target.value)}
                   />

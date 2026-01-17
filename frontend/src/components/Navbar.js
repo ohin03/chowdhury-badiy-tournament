@@ -54,7 +54,16 @@ export default function Navbar() {
           className="navbar-brand"
           onClick={closeMobileMenu}
         >
-          <span className="brand-icon">🏆</span>
+            <img
+    src="/tournament-logo.png"
+    alt="Chowdhury Badiy Tournament"
+    className="brand-logo"
+  />
+
+
+
+
+
           <span className="brand-text text-info">Chowdhury Badiy </span>
         </Link>
 

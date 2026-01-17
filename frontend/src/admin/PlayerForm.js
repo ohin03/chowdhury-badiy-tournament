@@ -78,7 +78,7 @@ export default function PlayerForm() {
                   <input
                     type="text"
                     className="form-control"
-                    placeholder="e.g., Virat Kohli"
+                    placeholder="Player name"
                     value={name}
                     onChange={e => setName(e.target.value)}
                   />

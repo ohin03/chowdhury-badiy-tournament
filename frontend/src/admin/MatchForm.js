@@ -337,46 +337,61 @@ export default function MatchForm() {
                         onChange={e => handleSelectMatch(e.target.value)}
                       >
                         <option value="">-- Select Match --</option>
-                        {getMatchesWithoutWinner().map(m => (
-                          <option key={m._id} value={m._id}>
-                            {m.teamA.name} vs {m.teamB.name} ({m.round})
-                          </option>
-                        ))}
+                      {getMatchesWithoutWinner().map(m => (
+  <option key={m._id} value={m._id}>
+    {m.teamA?.name || "TBD"} vs {m.teamB?.name || "TBD"} ({m.round})
+  </option>
+))}
+
                       </select>
                     </div>
                   )}
 
-                  {selectedMatch && (
-                    <div className="mb-3">
-                      <label className="form-label">Select Winner *</label>
-                      <select
-                        className="form-select"
-                        value={winner}
-                        onChange={e => setWinner(e.target.value)}
-                      >
-                        <option value="">-- Choose Winner --</option>
-                        <option value={matches.find(m => m._id === selectedMatch)?.teamA._id}>
-                          {matches.find(m => m._id === selectedMatch)?.teamA.name}
-                        </option>
-                        <option value={matches.find(m => m._id === selectedMatch)?.teamB._id}>
-                          {matches.find(m => m._id === selectedMatch)?.teamB.name}
-                        </option>
-                      </select>
-                    </div>
-                  )}
+                 {selectedMatch && (
+  <div className="mb-3">
+    <label className="form-label">Select Winner *</label>
+    <select
+      className="form-select"
+      value={winner}
+      onChange={e => setWinner(e.target.value)}
+    >
+      <option value="">-- Choose Winner --</option>
 
-                  {getMatchesWithWinner().length > 0 && (
-                    <div className="alert alert-info mt-3">
-                      <small>
-                        <strong>Completed Matches:</strong>
-                        {getMatchesWithWinner().map(m => (
-                          <div key={m._id}>
-                            {m.teamA.name} vs {m.teamB.name} → <strong>{m.winner.name}</strong> ({m.round})
-                          </div>
-                        ))}
-                      </small>
-                    </div>
-                  )}
+      {(() => {
+        const match = matches.find(m => m._id === selectedMatch);
+        if (!match) return null;
+
+        return (
+          <>
+            <option value={match.teamA?._id}>
+              {match.teamA?.name || "Team A"}
+            </option>
+            <option value={match.teamB?._id}>
+              {match.teamB?.name || "Team B"}
+            </option>
+          </>
+        );
+      })()}
+    </select>
+  </div>
+)}
+  
+{getMatchesWithWinner().length > 0 && (
+  <div className="alert alert-info mt-3">
+    <small>
+      <strong>Completed Matches:</strong>
+      {getMatchesWithWinner().map(m => (
+        <div key={m._id}>
+          {m.teamA?.name || "TBD"} vs {m.teamB?.name || "TBD"} →{" "}
+          <strong>{m.winner?.name || "Not decided"}</strong> ({m.round})
+        </div>
+      ))}
+    </small>
+  </div>
+)}
+
+
+             
 
                   {error && <p className="text-danger mb-3">{error}</p>}
 
