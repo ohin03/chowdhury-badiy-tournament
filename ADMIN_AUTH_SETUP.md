@@ -3,10 +3,9 @@
 ## 🎯 Admin Credentials Configuration
 
 ### Environment Variables (.env)
-```
-ADMIN_USERNAME=admin
-ADMIN_PASSWORD=khelatournament123@@
-```
+
+```ADMIN_USERNAME=secret
+ADMIN_PASSWORD=secret
 
 **Location**: `backend/.env`  
 **Status**: ✅ Configured  
@@ -17,7 +16,7 @@ ADMIN_PASSWORD=khelatournament123@@
 ## 🔒 Password Security Implementation
 
 ### Hashing Process
-1. **Password in .env**: Plain text `khelatournament123@@`
+1. **Password in .env**: Plain text `it's secret for issues`
 2. **Before saving to DB**: Hashed using bcryptjs (10 rounds)
 3. **In MongoDB**: Only hashed password stored, never plain text
 4. **Login comparison**: bcryptjs.compare() verifies hashed passwords
